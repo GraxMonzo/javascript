@@ -57,6 +57,9 @@ export const applicationConfig = () => {
     addDependency: (name: string, version: string | undefined) => {
       if (version) {
         dependencies.set(name, version);
+      } else {
+        const packageName = name.split('/').pop()?.replace('clerk-', '');
+        dependencies.set(name, `file:${process.cwd()}/packages/${packageName}`);
       }
       return self;
     },
