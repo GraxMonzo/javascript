@@ -1,5 +1,6 @@
 import type { ImageResource } from '@clerk/types';
 import { describe, it } from '@jest/globals';
+import React from 'react';
 
 import { bindCreateFixtures, render, screen } from '../../../../testUtils';
 import { ProfilePage } from '../ProfilePage';
@@ -161,7 +162,7 @@ describe('ProfilePage', () => {
       expect(fixtures.clerk.user?.setProfileImage).toHaveBeenCalledWith({ file: null });
     });
 
-    xit('"Remove image" is not shown when a default image exists', async () => {
+    it.skip('"Remove image" is not shown when a default image exists', async () => {
       const { wrapper, fixtures } = await createFixtures(f => {
         f.withUser({
           email_addresses: ['test@clerk.com'],

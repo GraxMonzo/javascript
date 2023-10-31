@@ -1,6 +1,5 @@
 import { deprecatedProperty } from '@clerk/shared/deprecated';
-import type { UserData as IUserData } from '@clerk/types';
-import type { UserDataJSON } from '@clerk/types';
+import type { UserData as IUserData, UserDataJSON } from '@clerk/types';
 
 export class UserData implements IUserData {
   firstName?: string;

@@ -26,7 +26,6 @@ export const UserMembershipList = (props: UserMembershipListProps) => {
 
   const otherOrgs = (organizationList || []).map(e => e.organization).filter(o => o.id !== currentOrg?.id);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { username, primaryEmailAddress, primaryPhoneNumber, ...userWithoutIdentifiers } = user;
 
   return (
