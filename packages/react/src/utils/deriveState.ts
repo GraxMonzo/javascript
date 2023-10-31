@@ -1,5 +1,11 @@
-import type { ActiveSessionResource, InitialState, OrganizationResource, Resources, UserResource } from '@clerk/types';
-import type { MembershipRole } from '@clerk/types';
+import type {
+  ActiveSessionResource,
+  InitialState,
+  MembershipRole,
+  OrganizationResource,
+  Resources,
+  UserResource,
+} from '@clerk/types';
 
 export const deriveState = (clerkLoaded: boolean, state: Resources, initialState: InitialState | undefined) => {
   if (!clerkLoaded && initialState) {
