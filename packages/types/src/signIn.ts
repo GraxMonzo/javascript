@@ -58,8 +58,13 @@ import type {
   TOTPStrategy,
   Web3Strategy,
 } from './strategies';
-import type { CreateMagicLinkFlowReturn, StartMagicLinkFlowParams } from './verification';
-import type { CreateEmailLinkFlowReturn, StartEmailLinkFlowParams, VerificationResource } from './verification';
+import type {
+  CreateEmailLinkFlowReturn,
+  CreateMagicLinkFlowReturn,
+  StartEmailLinkFlowParams,
+  StartMagicLinkFlowParams,
+  VerificationResource,
+} from './verification';
 import type { AuthenticateWithWeb3Params } from './web3Wallet';
 
 export interface SignInResource extends ClerkResource {

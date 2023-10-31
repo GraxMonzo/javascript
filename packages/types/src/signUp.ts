@@ -27,8 +27,13 @@ import type {
   Web3Strategy,
 } from './strategies';
 import type { SnakeToCamel } from './utils';
-import type { CreateMagicLinkFlowReturn, StartMagicLinkFlowParams } from './verification';
-import type { CreateEmailLinkFlowReturn, StartEmailLinkFlowParams, VerificationResource } from './verification';
+import type {
+  CreateEmailLinkFlowReturn,
+  CreateMagicLinkFlowReturn,
+  StartEmailLinkFlowParams,
+  StartMagicLinkFlowParams,
+  VerificationResource,
+} from './verification';
 import type { AttemptWeb3WalletVerificationParams, AuthenticateWithWeb3Params } from './web3Wallet';
 
 declare global {

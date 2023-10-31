@@ -1,8 +1,13 @@
 import type { IdentificationLinkResource } from './identificationLink';
 import type { ClerkResource } from './resource';
 import type { EmailCodeStrategy, EmailLinkStrategy } from './strategies';
-import type { CreateMagicLinkFlowReturn, StartMagicLinkFlowParams } from './verification';
-import type { CreateEmailLinkFlowReturn, StartEmailLinkFlowParams, VerificationResource } from './verification';
+import type {
+  CreateEmailLinkFlowReturn,
+  CreateMagicLinkFlowReturn,
+  StartEmailLinkFlowParams,
+  StartMagicLinkFlowParams,
+  VerificationResource,
+} from './verification';
 
 export type PrepareEmailAddressVerificationParams =
   | {
