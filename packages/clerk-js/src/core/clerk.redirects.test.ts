@@ -113,12 +113,12 @@ describe('Clerk singleton - Redirects', () => {
 
         clerkForProductionInstance = new Clerk(productionFrontendApi);
         await clerkForProductionInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
 
         clerkForDevelopmentInstance = new Clerk(developmentFrontendApi);
         await clerkForDevelopmentInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
       });
 
@@ -191,12 +191,12 @@ describe('Clerk singleton - Redirects', () => {
 
         clerkForProductionInstance = new Clerk(productionFrontendApi);
         await clerkForProductionInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
 
         clerkForDevelopmentInstance = new Clerk(developmentFrontendApi);
         await clerkForDevelopmentInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
       });
 
@@ -282,12 +282,12 @@ describe('Clerk singleton - Redirects', () => {
 
         clerkForProductionInstance = new Clerk(productionFrontendApi);
         await clerkForProductionInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
 
         clerkForDevelopmentInstance = new Clerk(developmentFrontendApi);
         await clerkForDevelopmentInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
       });
 
@@ -315,12 +315,12 @@ describe('Clerk singleton - Redirects', () => {
 
         clerkForProductionInstance = new Clerk(productionFrontendApi);
         await clerkForProductionInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
 
         clerkForDevelopmentInstance = new Clerk(developmentFrontendApi);
         await clerkForDevelopmentInstance.load({
-          navigate: mockNavigate,
+          push: mockNavigate,
         });
       });
 

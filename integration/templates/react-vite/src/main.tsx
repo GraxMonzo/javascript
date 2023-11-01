@@ -14,7 +14,7 @@ const Root = () => {
     <ClerkProvider
       // @ts-ignore
       publishableKey={import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string}
-      navigate={(to: string) => navigate(to)}
+      push={(to: string) => navigate(to)}
     >
       <Outlet />
     </ClerkProvider>

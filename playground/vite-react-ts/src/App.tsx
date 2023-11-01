@@ -1,7 +1,3 @@
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import clerkLogo from '/clerk.svg';
-import './App.css';
 import {
   ClerkProvider,
   RedirectToSignIn,
@@ -14,6 +10,10 @@ import {
   useUser,
 } from '@clerk/clerk-react';
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import './App.css';
+import reactLogo from './assets/react.svg';
+import clerkLogo from '/clerk.svg';
+import viteLogo from '/vite.svg';
 
 const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
 
@@ -67,7 +67,7 @@ function ClerkProviderWithRoutes() {
   return (
     <ClerkProvider
       publishableKey={clerkPubKey}
-      navigate={to => navigate(to)}
+      push={to => navigate(to)}
     >
       <div>
         <a href='#'>

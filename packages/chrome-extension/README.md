@@ -68,7 +68,7 @@ function ClerkProviderWithRoutes() {
   return (
     <ClerkProvider
       publishableKey={publishableKey}
-      navigate={to => navigate(to)}
+      push={to => navigate(to)}
     >
       <Routes>
         <Route
