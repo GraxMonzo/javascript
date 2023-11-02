@@ -69,6 +69,7 @@ import {
   createPageLifecycle,
   errorThrower,
   getClerkQueryParam,
+  getETLDPlusOneFromFrontendApi,
   hasExternalAccountSignUpError,
   ignoreEventValue,
   inActiveBrowserTab,
@@ -310,6 +311,25 @@ export default class Clerk implements ClerkInterface {
 
   public isReady = (): boolean => this.#isReady;
 
+  get allowedRedirectOrigins(): (string | RegExp)[] | undefined {
+    if (!this.#options.allowedRedirectOrigins) {
+      const origins = [];
+      if (inBrowser()) {
+        origins.push(window.location.origin);
+        origins.push(window.location.origin + '/*');
+      }
+
+      const frontendApi = parsePublishableKey(this.publishableKey)?.frontendApi || this.frontendApi;
+
+      origins.push(`https://*.${getETLDPlusOneFromFrontendApi(frontendApi)}`);
+      origins.push(`https://*.${getETLDPlusOneFromFrontendApi(frontendApi)}/*`);
+
+      return origins;
+    }
+
+    return this.#options.allowedRedirectOrigins;
+  }
+
   public load = async (options?: ClerkOptions): Promise<void> => {
     if (this.#isReady) {
       return;
@@ -319,6 +339,8 @@ export default class Clerk implements ClerkInterface {
       ...defaultOptions,
       ...options,
     };
+
+    this.#options.allowedRedirectOrigins = this.allowedRedirectOrigins;
 
     if (this.#options.standardBrowser) {
       this.#isReady = await this.#loadInStandardBrowser();
