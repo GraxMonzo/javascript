@@ -57,10 +57,16 @@ export const applicationConfig = () => {
     addDependency: (name: string, version: string | undefined) => {
       if (version) {
         dependencies.set(name, version);
+      } else if (name.includes('@clerk/')) {
+        // find package folder using the package name
+        const packageNameDirectory = name.split('/').pop()?.replace('clerk-', '');
+        dependencies.set(name, `file:${process.cwd()}/packages/${packageNameDirectory}`);
       } else {
-        const packageName = name.split('/').pop()?.replace('clerk-', '');
-        dependencies.set(name, `file:${process.cwd()}/packages/${packageName}`);
+        // since we have moved the integrations outside the monorepo we should fallback to * in case
+        // of empty version for non Clerk packages (eg next should install the latest version)
+        dependencies.set(name, '*');
       }
+
       return self;
     },
     commit: async (opts?: { stableHash?: string }) => {
