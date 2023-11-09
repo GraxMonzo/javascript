@@ -539,10 +539,7 @@ export const trTR: LocalizationResource = {
     membersPage: {
       detailsTitle__emptyRow: 'Gösterilecek üye yok',
       action__invite: 'Davet et',
-      start: {
-        headerTitle__active: 'Aktif',
-        headerTitle__invited: 'Davetli',
-      },
+      start: {},
       activeMembersTab: {
         tableHeader__user: 'Kullanıcı',
         tableHeader__joined: 'Katılma tarihi',
