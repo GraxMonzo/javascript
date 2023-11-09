@@ -521,7 +521,6 @@ export const itIT: LocalizationResource = {
   createOrganization: {
     title: 'Crea organizzazione',
     formButtonSubmit: 'Crea organizzazione',
-    subtitle: "Imposta il profile dell'organizzazione",
     invitePage: {
       formButtonReset: 'Salta',
     },

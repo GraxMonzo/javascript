@@ -688,7 +688,6 @@ export const ptBR: LocalizationResource = {
   createOrganization: {
     title: 'Criar organização',
     formButtonSubmit: 'Criar organização',
-    subtitle: 'Configure o perfil da organização',
     invitePage: {
       formButtonReset: 'Pular',
     },

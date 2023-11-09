@@ -677,7 +677,6 @@ export const arSA: LocalizationResource = {
   createOrganization: {
     title: 'أنشاء منظمة',
     formButtonSubmit: 'أنشاء منظمة',
-    subtitle: 'تعيين الملف الشخصي للمنظمة',
     invitePage: {
       formButtonReset: 'تخطي',
     },

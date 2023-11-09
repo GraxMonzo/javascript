@@ -552,7 +552,6 @@ export const csCZ: LocalizationResource = {
   createOrganization: {
     title: 'Vytvořit organizaci',
     formButtonSubmit: 'Vytvořit organizaci',
-    subtitle: 'Nastavit profil organizace',
     invitePage: {
       formButtonReset: 'Přeskočit',
     },

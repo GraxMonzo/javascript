@@ -575,7 +575,6 @@ export const viVN: LocalizationResource = {
   createOrganization: {
     title: 'Tạo Tổ chức',
     formButtonSubmit: 'Tạo tổ chức',
-    subtitle: 'Đặt hồ sơ tổ chức',
     invitePage: {
       formButtonReset: 'Bỏ qua',
     },

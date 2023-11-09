@@ -527,7 +527,6 @@ export const esES: LocalizationResource = {
   createOrganization: {
     title: 'Crear organización',
     formButtonSubmit: 'Crear organización',
-    subtitle: 'Establecer el perfil de la organización',
     invitePage: {
       formButtonReset: 'Saltar',
     },

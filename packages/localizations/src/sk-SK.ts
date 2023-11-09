@@ -554,7 +554,6 @@ export const skSK: LocalizationResource = {
   createOrganization: {
     title: 'Vytvoriť organizáciu',
     formButtonSubmit: 'Vytvoriť organizáciu',
-    subtitle: 'Nastaviť profil organizácie',
     invitePage: {
       formButtonReset: 'Preskočiť',
     },

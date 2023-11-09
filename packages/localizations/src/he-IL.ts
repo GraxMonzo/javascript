@@ -549,7 +549,6 @@ export const heIL: LocalizationResource = {
   createOrganization: {
     title: 'צור ארגון',
     formButtonSubmit: 'צור ארגון',
-    subtitle: 'הגדר את פרופיל הארגון',
     invitePage: {
       formButtonReset: 'דלג',
     },

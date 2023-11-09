@@ -567,7 +567,6 @@ export const ukUA: LocalizationResource = {
   createOrganization: {
     title: 'Створити організацію',
     formButtonSubmit: 'Створити організацію',
-    subtitle: 'Налаштування профілю організації',
     invitePage: {
       formButtonReset: 'Пропустити',
     },

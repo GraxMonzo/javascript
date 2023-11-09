@@ -549,7 +549,6 @@ export const jaJP: LocalizationResource = {
   createOrganization: {
     title: '組織の作成',
     formButtonSubmit: '組織を作成する',
-    subtitle: '組織のプロフィールを設定する',
     invitePage: {
       formButtonReset: 'スキップ',
     },

@@ -554,7 +554,6 @@ export const ruRU: LocalizationResource = {
   createOrganization: {
     title: 'Создать организацию',
     formButtonSubmit: 'Создать организацию',
-    subtitle: 'Настройка профиля организации',
     invitePage: {
       formButtonReset: 'Пропустить',
     },
