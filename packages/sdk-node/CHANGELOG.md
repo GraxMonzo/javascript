@@ -1,5 +1,34 @@
 # Change Log
 
+## 5.0.0-alpha-v5.1
+
+### Major Changes
+
+- Drop deprecations. Migration steps: ([#2021](https://github.com/clerk/javascript/pull/2021)) by [@dimkl](https://github.com/dimkl)
+
+  - use `CLERK_SECRET_KEY` instead of `CLERK_API_KEY` env variable
+  - use `secretKey` instead of `apiKey`
+  - use `CLERK_PUBLISHABLE_KEY` instead of `CLERK_FRONTEND_API` env variable
+  - use `publishableKey` instead of `frontendApi`
+  - drop Redwood hotfix (upgrade to latest version)
+  - use `createClerkClient` with options to create a new clerkClient instead of using
+    the following setters:
+    - `setClerkApiVersion`
+    - `setClerkHttpOptions`
+    - `setClerkServerApiUrl`
+    - `setClerkApiKey`
+  - use `@clerk/clerk-sdk-node` instead of `@clerk/clerk-sdk-node/{cjs|esm}/instance`
+
+  Extra:
+
+  - bundle only index.ts and instance.ts
+
+### Patch Changes
+
+- Updated dependencies [[`64d3763ec`](https://github.com/clerk/javascript/commit/64d3763ec73747ad04c4b47017195cf4114e150c), [`7f833da9e`](https://github.com/clerk/javascript/commit/7f833da9ebc1b2ec9c65513628c377d0584e5d72), [`492b8a7b1`](https://github.com/clerk/javascript/commit/492b8a7b12f14658a384566012e5807f0a171710), [`0d1052ac2`](https://github.com/clerk/javascript/commit/0d1052ac284b909786fd0e4744b02fcf4d1a8be6), [`e0e79b4fe`](https://github.com/clerk/javascript/commit/e0e79b4fe47f64006718d547c898b9f67fe4d424), [`a6451aece`](https://github.com/clerk/javascript/commit/a6451aecef0bac578b295b524f1246dede3a7598)]:
+  - @clerk/shared@2.0.0-alpha-v5.1
+  - @clerk/backend@1.0.0-alpha-v5.1
+
 ## 5.0.0-alpha-v5.0
 
 ### Major Changes

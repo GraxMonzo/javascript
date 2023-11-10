@@ -1,5 +1,66 @@
 # Change Log
 
+## 5.0.0-alpha-v5.1
+
+### Major Changes
+
+- Drop deprecations. Migration steps: ([#2082](https://github.com/clerk/javascript/pull/2082)) by [@dimkl](https://github.com/dimkl)
+
+  - use `publishableKey` instead of `frontendApi`
+  - use `Clerk.handleEmailLinkVerification()` instead of `Clerk.handleMagicLinkVerification()`
+  - use `isEmailLinkError` instead of `isMagicLinkError`
+  - use `EmailLinkErrorCode` instead of `MagicLinkErrorCode`
+  - use `useEmailLink` instead of `useMagicLink`
+  - drop `orgs` jwt claim from session token
+  - use `ExternalAccount.imageUrl` instead of `ExternalAccount.avatarUrl`
+  - use `Organization.imageUrl` instead of `Organization.logoUrl`
+  - use `User.imageUrl` instead of `User.profileImageUrl`
+  - use `OrganizationMembershipPublicUserData.imageUrl` instead of `OrganizationMembershipPublicUserData.profileImageUrl`
+  - use `useOrganizationList` instead of `useOrganizations`
+  - use `userProfileProps` instead of `userProfile` in `Appearance`
+  - use `Clerk.setActive()` instead of `Clerk.setSession()`
+  - drop `password` param in `User.update()`
+  - use `afterSelectOrganizationUrl` instead of `afterSwitchOrganizationUrl` in `OrganizationSwitcher`
+  - drop `Clerk.experimental_canUseCaptcha` / `Clerk.Clerk.experimental_captchaSiteKey` / `Clerk.experimental_captchaURL` (were meant for internal use)
+  - use `User.getOrganizationMemberships()` instead of `Clerk.getOrganizationMemberships()`
+  - drop `lastOrganizationInvitation` / `lastOrganizationMember` from Clerk emitted events
+  - drop `Clerk.__unstable__invitationUpdate` / `Clerk.__unstable__membershipUpdate`
+  - drop support for string param in `Organization.create()`
+  - use `Organization.getInvitations()` instead of `Organization.getPendingInvitations()`
+  - use `pageSize` instead of `limit` in `OrganizationMembership.retrieve()`
+  - use `initialPage` instead of `offset` in `OrganizationMembership.retrieve()`
+  - drop `lastOrganizationInvitation` / `lastOrganizationMember` from ClerkProvider
+  - use `invitations` instead of `invitationList` in `useOrganization`
+  - use `memberships` instead of `membershipList` in `useOrganization`
+  - use `redirectUrl` instead of `redirect_url` in `User.createExternalAccount()`
+  - use `signature` instead of `generatedSignature` in `Signup.attemptWeb3WalletVerification()`
+
+### Minor Changes
+
+- Increase the duration until data become stale for organization hooks. ([#2093](https://github.com/clerk/javascript/pull/2093)) by [@panteliselef](https://github.com/panteliselef)
+
+- Handle user_locked error encountered in an oauth flow by redirecting to /sign-up or /sign-in ([#2019](https://github.com/clerk/javascript/pull/2019)) by [@yourtallness](https://github.com/yourtallness)
+
+- Add a private \_\_navigateWithError util function to clerk for use in User Lockout scenarios ([#2043](https://github.com/clerk/javascript/pull/2043)) by [@yourtallness](https://github.com/yourtallness)
+
+### Patch Changes
+
+- Fix incorrect pagination counters in data tables inside `<OrganizationProfile/>`. ([#2056](https://github.com/clerk/javascript/pull/2056)) by [@panteliselef](https://github.com/panteliselef)
+
+- Use strict equality operator to check for lockout errors in handleRedirectCallback ([#2072](https://github.com/clerk/javascript/pull/2072)) by [@yourtallness](https://github.com/yourtallness)
+
+- Emit session when permissions or role of the active memberships change. ([#2073](https://github.com/clerk/javascript/pull/2073)) by [@panteliselef](https://github.com/panteliselef)
+
+- Return reject(err) in factor one & two code forms ([#2080](https://github.com/clerk/javascript/pull/2080)) by [@yourtallness](https://github.com/yourtallness)
+
+- Refactor of internal radio input in forms. ([#2034](https://github.com/clerk/javascript/pull/2034)) by [@panteliselef](https://github.com/panteliselef)
+
+- Refresh invited members upon revocation ([#2058](https://github.com/clerk/javascript/pull/2058)) by [@tmilewski](https://github.com/tmilewski)
+
+- Updated dependencies [[`64d3763ec`](https://github.com/clerk/javascript/commit/64d3763ec73747ad04c4b47017195cf4114e150c), [`7f833da9e`](https://github.com/clerk/javascript/commit/7f833da9ebc1b2ec9c65513628c377d0584e5d72), [`492b8a7b1`](https://github.com/clerk/javascript/commit/492b8a7b12f14658a384566012e5807f0a171710), [`0d1052ac2`](https://github.com/clerk/javascript/commit/0d1052ac284b909786fd0e4744b02fcf4d1a8be6), [`e0e79b4fe`](https://github.com/clerk/javascript/commit/e0e79b4fe47f64006718d547c898b9f67fe4d424)]:
+  - @clerk/shared@2.0.0-alpha-v5.1
+  - @clerk/types@4.0.0-alpha-v5.1
+
 ## 5.0.0-alpha-v5.0
 
 ### Major Changes

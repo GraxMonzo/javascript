@@ -1,5 +1,47 @@
 # Change Log
 
+## 1.0.0-alpha-v5.1
+
+### Major Changes
+
+- Drop deprecations. Migration steps: ([#2082](https://github.com/clerk/javascript/pull/2082)) by [@dimkl](https://github.com/dimkl)
+
+  - use `publishableKey` instead of `frontendApi`
+  - use `Clerk.handleEmailLinkVerification()` instead of `Clerk.handleMagicLinkVerification()`
+  - use `isEmailLinkError` instead of `isMagicLinkError`
+  - use `EmailLinkErrorCode` instead of `MagicLinkErrorCode`
+  - use `useEmailLink` instead of `useMagicLink`
+  - drop `orgs` jwt claim from session token
+  - use `ExternalAccount.imageUrl` instead of `ExternalAccount.avatarUrl`
+  - use `Organization.imageUrl` instead of `Organization.logoUrl`
+  - use `User.imageUrl` instead of `User.profileImageUrl`
+  - use `OrganizationMembershipPublicUserData.imageUrl` instead of `OrganizationMembershipPublicUserData.profileImageUrl`
+  - use `useOrganizationList` instead of `useOrganizations`
+  - use `userProfileProps` instead of `userProfile` in `Appearance`
+  - use `Clerk.setActive()` instead of `Clerk.setSession()`
+  - drop `password` param in `User.update()`
+  - use `afterSelectOrganizationUrl` instead of `afterSwitchOrganizationUrl` in `OrganizationSwitcher`
+  - drop `Clerk.experimental_canUseCaptcha` / `Clerk.Clerk.experimental_captchaSiteKey` / `Clerk.experimental_captchaURL` (were meant for internal use)
+  - use `User.getOrganizationMemberships()` instead of `Clerk.getOrganizationMemberships()`
+  - drop `lastOrganizationInvitation` / `lastOrganizationMember` from Clerk emitted events
+  - drop `Clerk.__unstable__invitationUpdate` / `Clerk.__unstable__membershipUpdate`
+  - drop support for string param in `Organization.create()`
+  - use `Organization.getInvitations()` instead of `Organization.getPendingInvitations()`
+  - use `pageSize` instead of `limit` in `OrganizationMembership.retrieve()`
+  - use `initialPage` instead of `offset` in `OrganizationMembership.retrieve()`
+  - drop `lastOrganizationInvitation` / `lastOrganizationMember` from ClerkProvider
+  - use `invitations` instead of `invitationList` in `useOrganization`
+  - use `memberships` instead of `membershipList` in `useOrganization`
+  - use `redirectUrl` instead of `redirect_url` in `User.createExternalAccount()`
+  - use `signature` instead of `generatedSignature` in `Signup.attemptWeb3WalletVerification()`
+
+### Patch Changes
+
+- Updated dependencies [[`64d3763ec`](https://github.com/clerk/javascript/commit/64d3763ec73747ad04c4b47017195cf4114e150c), [`034abeb76`](https://github.com/clerk/javascript/commit/034abeb762744c4948ef6600b21cd9dd68d165a8), [`5f49568f6`](https://github.com/clerk/javascript/commit/5f49568f6e345ce63b15a4c301fc81c3af30211a), [`7f833da9e`](https://github.com/clerk/javascript/commit/7f833da9ebc1b2ec9c65513628c377d0584e5d72), [`9e10d577e`](https://github.com/clerk/javascript/commit/9e10d577e2a4b9b2cbf8b3272d6e58f4627ae922), [`492b8a7b1`](https://github.com/clerk/javascript/commit/492b8a7b12f14658a384566012e5807f0a171710), [`d1b524ffb`](https://github.com/clerk/javascript/commit/d1b524ffba0be0cd683e6ace85b91b382ad442bb), [`db3eefe8c`](https://github.com/clerk/javascript/commit/db3eefe8c0fc04ce1de47610dc23769a18f1629c), [`0d1052ac2`](https://github.com/clerk/javascript/commit/0d1052ac284b909786fd0e4744b02fcf4d1a8be6), [`59336d3d4`](https://github.com/clerk/javascript/commit/59336d3d468edd205c0e5501b7d5046611ee217d), [`e0e79b4fe`](https://github.com/clerk/javascript/commit/e0e79b4fe47f64006718d547c898b9f67fe4d424), [`3c4209068`](https://github.com/clerk/javascript/commit/3c42090688166b74badfdefc7ed8c428601a0ba7)]:
+  - @clerk/clerk-js@5.0.0-alpha-v5.1
+  - @clerk/shared@2.0.0-alpha-v5.1
+  - @clerk/clerk-react@5.0.0-alpha-v5.1
+
 ## 1.0.0-alpha-v5.0
 
 ### Major Changes
